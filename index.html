@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        background-color: #333;
+        color: #ededed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        /* 900px for large screen, 100% for small screen */
+        width: min(100%, 900px);
+        background-color: #242424;
+        border-radius: 5px;
+        padding: 2rem 3rem;
+        margin: 0.5rem;
+      }
+      h1 {
+        font-size: 3.5rem;
+        line-height: 1.4;
+      }
+      p {
+        font-size: 0.5em;
+        line-height: 1.2;
+      }
+      #wrapper {
+        font-size: 3.2rem;
+        display: flex;
+        flex-direction: column;
+        height: 1em;
+        overflow: hidden;
+        margin-top: 0.5rem;
+      }
+      #wrapper span {
+        font-weight: bolder;
+        line-height: 1;
+        text-transform: uppercase;
+        width: fit-content;
+        background: linear-gradient(to right, #fc76d1, 60%, #8b83f9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: scroll-text 15s infinite;
+      }
+      @keyframes scroll-text {
+        0% {
+          transform: translateY(0);
+        }
+        10% {
+          transform: translateY(0);
+        }
+        20% {
+          transform: translateY(-1em);
+        }
+        30% {
+          transform: translateY(-1em);
+        }
+        40% {
+          transform: translateY(-2em);
+        }
+        55% {
+          transform: translateY(-2em);
+        }
+        65% {
+          transform: translateY(-3em);
+        }
+        80% {
+          transform: translateY(-3em);
+        }
+        90% {
+          transform: translateY(-4em);
+        }
+        100% {
+          transform: translateY(-4em);
+        }
+      }
+
+      button {
+        background-color: transparent;
+        border: 1px solid #ededed;
+        color: #ededed;
+        font-size: 1em;
+        font-weight: bold;
+        letter-spacing: 1px;
+        border-radius: 5px;
+        padding: 10px 15px;
+        margin-top: 1.3rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      button:hover {
+        background-color: #333;
+      }
+
+      @media screen and (max-width: 680px) {
+        .container {
+          padding: 2rem 1.2rem;
+        }
+        h1 {
+          font-size: 3rem;
+        }
+        #wrapper {
+          font-size: 2.7rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        <p>Hey, It's me</p>
+        Nay Hlaing Oo.
+        <p>
+          A tech enthusiast and an educator believes that everyone can be a
+          self-taught
+        </p>
+      </h1>
+      <div id="wrapper">
+        <span>Developer.</span>
+        <span>Desinger.</span>
+        <span>Creator.</span>
+        <span>Maker.</span>
+        <span>Developer.</span>
+      </div>
+      <button>Contact me</button>
+    </div>
+  </body>
+</html>
